@@ -1,0 +1,18 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#1a2332;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#grad6)"/>
+  <g stroke="#00d4ff" stroke-width="2" fill="none" opacity="0.7">
+    <path d="M 150 200 L 200 150 L 250 200 L 300 150 L 350 200 L 400 150 L 450 200"/>
+    <rect x="100" y="250" width="600" height="200" rx="10"/>
+    <circle cx="200" cy="320" r="15" fill="#00d4ff" opacity="0.3"/>
+    <circle cx="400" cy="320" r="15" fill="#00d4ff" opacity="0.3"/>
+    <circle cx="600" cy="320" r="15" fill="#00d4ff" opacity="0.3"/>
+  </g>
+  <text x="400" y="470" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="24" font-weight="bold">Reinforcement Learning</text>
+  <text x="400" y="500" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="14" opacity="0.7">Bipedal Robot Control</text>
+</svg>

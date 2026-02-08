@@ -1,0 +1,60 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1419;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a2332;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0099ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="800" fill="url(#bg1)"/>
+  
+  <!-- Grid background -->
+  <g stroke="#00d4ff" stroke-width="0.5" opacity="0.1">
+    <line x1="0" y1="0" x2="0" y2="800"/>
+    <line x1="100" y1="0" x2="100" y2="800"/>
+    <line x1="200" y1="0" x2="200" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="400" y1="0" x2="400" y2="800"/>
+    <line x1="500" y1="0" x2="500" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="700" y1="0" x2="700" y2="800"/>
+    <line x1="800" y1="0" x2="800" y2="800"/>
+    <line x1="900" y1="0" x2="900" y2="800"/>
+    <line x1="1000" y1="0" x2="1000" y2="800"/>
+    <line x1="1100" y1="0" x2="1100" y2="800"/>
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="0" y1="700" x2="1200" y2="700"/>
+  </g>
+  
+  <!-- Path trajectory -->
+  <path d="M 150 650 Q 300 400 450 300 T 750 250 T 1050 350" 
+        stroke="url(#accent1)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Reference points -->
+  <circle cx="150" cy="650" r="8" fill="#00d4ff"/>
+  <circle cx="300" cy="400" r="6" fill="#0099ff"/>
+  <circle cx="450" cy="300" r="6" fill="#0099ff"/>
+  <circle cx="750" cy="250" r="6" fill="#0099ff"/>
+  <circle cx="1050" cy="350" r="8" fill="#00d4ff"/>
+  
+  <!-- Dashboard panel -->
+  <rect x="50" y="50" width="300" height="200" fill="#1a2332" stroke="#00d4ff" stroke-width="1" opacity="0.8"/>
+  <text x="70" y="80" font-family="monospace" font-size="14" fill="#00d4ff" font-weight="bold">CONTROL_METRICS</text>
+  <line x1="70" y1="95" x2="320" y2="95" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+  <text x="70" y="120" font-family="monospace" font-size="12" fill="#88ccee">Tracking Error: 1.55m</text>
+  <text x="70" y="145" font-family="monospace" font-size="12" fill="#88ccee">Speed Ctrl: 25 km/h</text>
+  <text x="70" y="170" font-family="monospace" font-size="12" fill="#88ccee">Rollouts: 50 / step</text>
+  <text x="70" y="195" font-family="monospace" font-size="12" fill="#88ccee">Performance: 98.2%</text>
+  
+  <!-- Title -->
+  <text x="600" y="750" text-anchor="middle" font-family="monospace" font-size="28" fill="#00d4ff" font-weight="bold">MPPI Path Control</text>
+</svg>
