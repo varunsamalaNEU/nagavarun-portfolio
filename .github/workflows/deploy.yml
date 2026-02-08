@@ -34,12 +34,10 @@ jobs:
           rm -f package-lock.json
 
       - name: Install dependencies
-        working-directory: .
         run: npm install --legacy-peer-deps
 
       - name: Build
-        working-directory: client
-        run: npm run build
+        run: npx vite build --base=/nagavarun-portfolio/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
