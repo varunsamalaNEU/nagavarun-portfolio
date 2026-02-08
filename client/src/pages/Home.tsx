@@ -21,7 +21,7 @@ export default function Home() {
     
     // EmailJS Configuration
     // TODO: Replace these with your actual EmailJS credentials from https://dashboard.emailjs.com/
-    const serviceId = "service_sss6n9l";
+    const serviceId = "service_mrq0jxs";
     const templateId = "template_l8cuuge";
     const publicKey = "Ruh1-fg2sMkiUMGHy";
 
