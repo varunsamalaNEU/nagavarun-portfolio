@@ -1,6 +1,8 @@
 import { Mail, Github, Linkedin, ChevronDown, ArrowRight, Terminal, Network, Code, Download, ExternalLink, X } from "lucide-react";
 import { useState } from "react";
 import { education, skillCategories, experience, projects, contactInfo } from "@/lib/portfolio-data";
+import emailjs from '@emailjs/browser';
+import { toast } from "sonner";
 import "@/precision-theme.css";
 
 export default function Home() {
@@ -16,19 +18,40 @@ export default function Home() {
 
   const handleResumeSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Integrate with EmailJS or backend API to send email notification
-    console.log("Resume download requested by:", { name: downloaderName, email: downloaderEmail });
     
-    const link = document.createElement('a');
-    link.href = "Nagavarunsamala_Resume_R1.pdf";
-    link.download = "Nagavarun_Samala_Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    
-    setShowResumeModal(false);
-    setDownloaderName("");
-    setDownloaderEmail("");
+    // EmailJS Configuration
+    // TODO: Replace these with your actual EmailJS credentials from https://dashboard.emailjs.com/
+    const serviceId = "YOUR_SERVICE_ID";
+    const templateId = "YOUR_TEMPLATE_ID";
+    const publicKey = "YOUR_PUBLIC_KEY";
+
+    const templateParams = {
+      to_name: "Nagavarun",
+      from_name: downloaderName,
+      from_email: downloaderEmail,
+      message: `Resume downloaded by ${downloaderName} (${downloaderEmail})`
+    };
+
+    toast.promise(
+      emailjs.send(serviceId, templateId, templateParams, publicKey)
+        .then(() => {
+          const link = document.createElement('a');
+          link.href = "Nagavarunsamala_Resume_R1.pdf";
+          link.download = "Nagavarun_Samala_Resume.pdf";
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          
+          setShowResumeModal(false);
+          setDownloaderName("");
+          setDownloaderEmail("");
+        }),
+      {
+        loading: 'Processing...',
+        success: 'Resume download started!',
+        error: 'Failed to process request. Please try again.'
+      }
+    );
   };
 
   const projectImages = [
