@@ -28,6 +28,11 @@ jobs:
           cache: 'npm'
           cache-dependency-path: client/package-lock.json
 
+      - name: Remove private dependency
+        run: npm uninstall vite-plugin-manus-runtime
+        working-directory: client
+        continue-on-error: true
+
       - name: Install dependencies
         run: npm install --legacy-peer-deps
         working-directory: client
