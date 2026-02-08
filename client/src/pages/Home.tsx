@@ -142,7 +142,7 @@ export default function Home() {
               </div>
 
               <div className="flex flex-wrap gap-4 pt-4">
-                <a href="Nagavarunsamala_Resume_R1.pdf" onClick={handleDownloadRequest} className="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors shadow-lg shadow-slate-900/20 group cursor-pointer">
+                <a href={`${import.meta.env.BASE_URL}Nagavarunsamala_Resume_R1.pdf`} onClick={handleDownloadRequest} className="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors shadow-lg shadow-slate-900/20 group cursor-pointer">
                   Download Resume 
                   <Download className="ml-2 w-4 h-4 group-hover:translate-y-1 transition-transform" />
                 </a>
@@ -162,7 +162,7 @@ export default function Home() {
                 {/* Profile Image Container */}
                 <div className="absolute inset-8 rounded-3xl overflow-hidden border-4 border-white shadow-2xl">
                   <img 
-                    src="profile.jpg"
+                    src={`${import.meta.env.BASE_URL}profile.jpg`}
                     alt="Nagavarun Samala"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
