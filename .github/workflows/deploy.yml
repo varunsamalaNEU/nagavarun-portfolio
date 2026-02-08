@@ -38,7 +38,8 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Build
-        run: npm run build
+        working-directory: client
+        run: npx vite build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
