@@ -45,6 +45,10 @@ export default function Home() {
           setShowResumeModal(false);
           setDownloaderName("");
           setDownloaderEmail("");
+        })
+        .catch((error) => {
+          console.error("EmailJS Error:", error);
+          throw error;
         }),
       {
         loading: 'Processing...',
